@@ -1,0 +1,64 @@
+<HTML>
+<h1>Cайт сделан для дебила, который не любит учиться</h1>
+<h2>Двумерные массивы</h2>
+a = [[randint(-5, 10) for i in range(m)] for j in range(n)]</br>
+Вывод</br>
+</br>
+for i in range(n):</br>
+&emsp;for j in range(m):</br>
+&emsp;&emsp;print(a[i][j], end=' ')</br>
+&emsp;print()</br>
+</br>
+Минимум</br>
+</br>
+for i in range(n):</br>
+&emsp;for j in range(m):</br>
+&emsp;&emsp;if a[i][j] < min:</br>
+&emsp;&emsp;&emsp;imin = i</br>
+&emsp;&emsp;&emsp;jmin = j </br>
+</br>
+Поменять местами 2 строки k1,k2</br>
+</br>
+for j in range (m):</br>
+&emsp;temp = a[k1][j]</br>
+&emsp;a[k1][j] = a[k2][j]</br>
+&emsp;a[k2][j] = temp</br>
+</br>
+Поменять местами 2 столбца k1,k2</br>
+</br>
+for i in range (n):</br>
+&emsp;temp = a[i][k1]</br>
+&emsp;a[i][k1] = a[i][k2]</br>
+&emsp;a[i][k2] = temp</br>
+</br>
+Удаление к-ой строки</br>
+</br>
+for i in range (k,n-1):</br>
+&emsp;for j in range (m):</br>
+&emsp;&emsp;a[i][j] = a[i+1][j]</br>
+&emsp;print()</br>
+</br>
+Удаление к-ого столбца</br>
+</br>
+for i in range (n):</br>
+&emsp;for j in range (k,m-1):</br>
+&emsp;&emsp;a[i][j] = a[i][j+1]</br>
+&emsp;print()</br>
+</br>
+Вставка строки перед к-ой строкой</br>
+</br>
+for i in range (n,k-1,-1):</br>
+&emsp;for j in range(m):</br>
+&emsp;&emsp;a[i][j] = a[i-1][j]</br>
+</br>
+for j in range (m):</br>
+&emsp;a[k-1][j] = b[j]</br>
+</br>
+Транспонирование – это отображение элементов относительно главной диагонали</br>
+</br>
+for i in range (1,n):</br>
+&emsp;for j in range(i):</br>
+&emsp;&emsp;temp = a[i][j]</br>
+&emsp;&emsp;a[i][j] = a[j][i]</br>
+&emsp;&emsp;a[j][i] = temp</br>
+</HTML>
