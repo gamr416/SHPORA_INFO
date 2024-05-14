@@ -1,7 +1,10 @@
 <HTML>
 <h1>Cайт сделан для дебила, который не любит учиться</h1>
 <h2>Двумерные массивы</h2>
+Ввод матриц</br>
+</br>
 a = [[randint(-5, 10) for i in range(m)] for j in range(n)]</br>
+</br>
 Вывод</br>
 </br>
 for i in range(n):</br>
@@ -134,7 +137,7 @@ a = [[0 for i in range(n)] for i in range(n)]</br>
 for i in range(n):</br>
 &emsp;if i % 2 == 0:</br>
 &emsp;&emsp;for j in range(m):</br>
-&emsp;&emsp;&emsp;a[j][i] = k</br>
+&emsp;&emsp;&emsp;a[j][n - i - 1] = k</br>
 &emsp;&emsp;&emsp;k += 1</br>
 &emsp;else:</br>
 &emsp;&emsp;for j in range(m - 1, -1, -1):</br>
@@ -142,10 +145,32 @@ for i in range(n):</br>
 &emsp;&emsp;&emsp;k += 1</br>
 for i in range(n):</br>
 &emsp;for j in range(n):</br>
-&emsp;&emsp;print(a[i][n - j - 1], end = ' ')</br>
+&emsp;&emsp;print(a[i][j], end = ' ')</br>
 &emsp;print()</br>
 </br>
 Обход спиралью тип 1</br>
 </br>
-
+n = 5 #сторона квадрата</br>
+m = 1 #начальное число</br>
+a = [[0 for i in range(n)] for i in range(n)]</br>
+for k in range((n + 1) // 2 + 1):</br>
+&emsp;for j in range(k, n - k):</br>
+&emsp;&emsp;a[k][j] = m</br>
+&emsp;&emsp;m += 1</br>
+&emsp;for i in range(k + 1, n - k):</br>
+&emsp;&emsp;a[i][n - k - 1] = m</br>
+&emsp;&emsp;m += 1</br>
+&emsp;for j in range(n - k - 2, k - 1, -1):</br>
+&emsp;&emsp;a[n - k - 1][j] = m</br>
+&emsp;&emsp;m += 1</br>
+&emsp;for i in range(n - k - 2, k, -1):</br>
+&emsp;&emsp;a[i][k] = m</br>
+&emsp;&emsp;m += 1</br>
+for i in range(n):</br>
+&emsp;for j in range(n):</br>
+&emsp;&emsp;print(a[i][j], end = ' ')</br>
+&emsp;print()</br>
+</br>
+Обход спиралью тип 2</br>
+</br>
 </HTML>
