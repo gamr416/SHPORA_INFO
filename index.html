@@ -61,4 +61,91 @@ for i in range (1,n):</br>
 &emsp;&emsp;temp = a[i][j]</br>
 &emsp;&emsp;a[i][j] = a[j][i]</br>
 &emsp;&emsp;a[j][i] = temp</br>
+</br>
+<h2>Обходы матриц</h2>
+<img>
+</br>
+Обход змейкой тип 1</br>
+</br>
+n = 5</br>
+m = 5</br>
+k = 1</br>
+a = [[0 for i in range(n)] for i in range(n)]</br>
+for i in range(n):</br>
+&emsp;if i % 2 == 0:</br>
+&emsp;&emsp;for j in range(m):</br>
+&emsp;&emsp;&emsp;a[i][j] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+&emsp;else:</br>
+&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+&emsp;&emsp;a[i][j] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+for i in range(n):</br>
+&emsp;for j in range(n):</br>
+&emsp;&emsp;print(a[i][j], end = ' ')</br>
+&emsp;print()</br>
+</br>
+Обход змейкой тип 2</br>
+</br>
+n = 5</br>
+m = 5</br>
+k = 1</br>
+a = [[0 for i in range(n)] for i in range(n)]</br>
+for i in range(n):</br>
+&emsp;if i % 2 != 0:</br>
+&emsp;&emsp;for j in range(m):</br>
+&emsp;&emsp;&emsp;a[i][j] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+&emsp;else:</br>
+&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+&emsp;&emsp;a[i][j] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+for i in range(n):</br>
+&emsp;for j in range(n):</br>
+&emsp;&emsp;print(a[i][j], end = ' ')</br>
+&emsp;print()</br>
+</br>
+Обход змейкой тип 3</br>
+</br>
+n = 5</br>
+m = 5</br>
+k = 1</br>
+a = [[0 for i in range(n)] for i in range(n)]</br>
+for i in range(n):</br>
+&emsp;if i % 2 == 0:</br>
+&emsp;&emsp;for j in range(m):</br>
+&emsp;&emsp;&emsp;a[j][i] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+&emsp;else:</br>
+&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+&emsp;&emsp;a[j][i] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+for i in range(n):</br>
+&emsp;for j in range(n):</br>
+&emsp;&emsp;print(a[i][j], end = ' ')</br>
+&emsp;print()</br>
+</br>
+Обход змейкой тип 4</br>
+</br>
+n = 5</br>
+m = 5</br>
+k = 1</br>
+a = [[0 for i in range(n)] for i in range(n)]</br>
+for i in range(n):</br>
+&emsp;if i % 2 == 0:</br>
+&emsp;&emsp;for j in range(m):</br>
+&emsp;&emsp;&emsp;a[j][i] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+&emsp;else:</br>
+&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+&emsp;&emsp;a[j][n - i - 1] = k</br>
+&emsp;&emsp;&emsp;k += 1</br>
+for i in range(n):</br>
+&emsp;for j in range(n):</br>
+&emsp;&emsp;print(a[i][n - j - 1], end = ' ')</br>
+&emsp;print()</br>
+</br>
+Обход спиралью тип 1</br>
+</br>
+
 </HTML>
