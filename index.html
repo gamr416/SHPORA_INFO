@@ -1,176 +1,191 @@
 <HTML>
-<h1>Cайт сделан для дебила, который не любит учиться</h1>
-<h2>Двумерные массивы</h2>
-Ввод матриц</br>
-</br>
-a = [[randint(-5, 10) for i in range(m)] for j in range(n)]</br>
-</br>
-Вывод</br>
-</br>
-for i in range(n):</br>
-&emsp;for j in range(m):</br>
-&emsp;&emsp;print(a[i][j], end=' ')</br>
-&emsp;print()</br>
-</br>
-Минимум</br>
-</br>
-for i in range(n):</br>
-&emsp;for j in range(m):</br>
-&emsp;&emsp;if a[i][j] < min:</br>
-&emsp;&emsp;&emsp;imin = i</br>
-&emsp;&emsp;&emsp;jmin = j </br>
-</br>
-Поменять местами 2 строки k1,k2</br>
-</br>
-for j in range (m):</br>
-&emsp;temp = a[k1][j]</br>
-&emsp;a[k1][j] = a[k2][j]</br>
-&emsp;a[k2][j] = temp</br>
-</br>
-Поменять местами 2 столбца k1,k2</br>
-</br>
-for i in range (n):</br>
-&emsp;temp = a[i][k1]</br>
-&emsp;a[i][k1] = a[i][k2]</br>
-&emsp;a[i][k2] = temp</br>
-</br>
-Удаление к-ой строки</br>
-</br>
-for i in range (k,n-1):</br>
-&emsp;for j in range (m):</br>
-&emsp;&emsp;a[i][j] = a[i+1][j]</br>
-&emsp;print()</br>
-</br>
-Удаление к-ого столбца</br>
-</br>
-for i in range (n):</br>
-&emsp;for j in range (k,m-1):</br>
-&emsp;&emsp;a[i][j] = a[i][j+1]</br>
-&emsp;print()</br>
-</br>
-Вставка строки перед к-ой строкой</br>
-</br>
-for i in range (n,k-1,-1):</br>
-&emsp;for j in range(m):</br>
-&emsp;&emsp;a[i][j] = a[i-1][j]</br>
-</br>
-for j in range (m):</br>
-&emsp;a[k-1][j] = b[j]</br>
-</br>
-Транспонирование – это отображение элементов относительно главной диагонали</br>
-</br>
-for i in range (1,n):</br>
-&emsp;for j in range(i):</br>
-&emsp;&emsp;temp = a[i][j]</br>
-&emsp;&emsp;a[i][j] = a[j][i]</br>
-&emsp;&emsp;a[j][i] = temp</br>
-</br>
-<h2>Обходы матриц</h2>
-<img>
-</br>
-Обход змейкой тип 1</br>
-</br>
-n = 5</br>
-m = 5</br>
-k = 1</br>
-a = [[0 for i in range(n)] for i in range(n)]</br>
-for i in range(n):</br>
-&emsp;if i % 2 == 0:</br>
-&emsp;&emsp;for j in range(m):</br>
-&emsp;&emsp;&emsp;a[i][j] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-&emsp;else:</br>
-&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
-&emsp;&emsp;a[i][j] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-for i in range(n):</br>
-&emsp;for j in range(n):</br>
-&emsp;&emsp;print(a[i][j], end = ' ')</br>
-&emsp;print()</br>
-</br>
-Обход змейкой тип 2</br>
-</br>
-n = 5</br>
-m = 5</br>
-k = 1</br>
-a = [[0 for i in range(n)] for i in range(n)]</br>
-for i in range(n):</br>
-&emsp;if i % 2 != 0:</br>
-&emsp;&emsp;for j in range(m):</br>
-&emsp;&emsp;&emsp;a[i][j] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-&emsp;else:</br>
-&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
-&emsp;&emsp;a[i][j] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-for i in range(n):</br>
-&emsp;for j in range(n):</br>
-&emsp;&emsp;print(a[i][j], end = ' ')</br>
-&emsp;print()</br>
-</br>
-Обход змейкой тип 3</br>
-</br>
-n = 5</br>
-m = 5</br>
-k = 1</br>
-a = [[0 for i in range(n)] for i in range(n)]</br>
-for i in range(n):</br>
-&emsp;if i % 2 == 0:</br>
-&emsp;&emsp;for j in range(m):</br>
-&emsp;&emsp;&emsp;a[j][i] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-&emsp;else:</br>
-&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
-&emsp;&emsp;a[j][i] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-for i in range(n):</br>
-&emsp;for j in range(n):</br>
-&emsp;&emsp;print(a[i][j], end = ' ')</br>
-&emsp;print()</br>
-</br>
-Обход змейкой тип 4</br>
-</br>
-n = 5</br>
-m = 5</br>
-k = 1</br>
-a = [[0 for i in range(n)] for i in range(n)]</br>
-for i in range(n):</br>
-&emsp;if i % 2 == 0:</br>
-&emsp;&emsp;for j in range(m):</br>
-&emsp;&emsp;&emsp;a[j][n - i - 1] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-&emsp;else:</br>
-&emsp;&emsp;for j in range(m - 1, -1, -1):</br>
-&emsp;&emsp;a[j][n - i - 1] = k</br>
-&emsp;&emsp;&emsp;k += 1</br>
-for i in range(n):</br>
-&emsp;for j in range(n):</br>
-&emsp;&emsp;print(a[i][j], end = ' ')</br>
-&emsp;print()</br>
-</br>
-Обход спиралью тип 1</br>
-</br>
-n = 5 #сторона квадрата</br>
-m = 1 #начальное число</br>
-a = [[0 for i in range(n)] for i in range(n)]</br>
-for k in range((n + 1) // 2 + 1):</br>
-&emsp;for j in range(k, n - k):</br>
-&emsp;&emsp;a[k][j] = m</br>
-&emsp;&emsp;m += 1</br>
-&emsp;for i in range(k + 1, n - k):</br>
-&emsp;&emsp;a[i][n - k - 1] = m</br>
-&emsp;&emsp;m += 1</br>
-&emsp;for j in range(n - k - 2, k - 1, -1):</br>
-&emsp;&emsp;a[n - k - 1][j] = m</br>
-&emsp;&emsp;m += 1</br>
-&emsp;for i in range(n - k - 2, k, -1):</br>
-&emsp;&emsp;a[i][k] = m</br>
-&emsp;&emsp;m += 1</br>
-for i in range(n):</br>
-&emsp;for j in range(n):</br>
-&emsp;&emsp;print(a[i][j], end = ' ')</br>
-&emsp;print()</br>
-</br>
-Обход спиралью тип 2</br>
-</br>
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      Сайт для инфы
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <h1>Cайт сделан уважаемым молодым чеовеком, который не любит учиться</h1>
+    <h3>создатель: tg @LineChangerr</h3>
+    <h2>Двумерные массивы</h2>
+    <div class="chapter">
+    <h4>Ввод матриц</h4>
+    </br>
+    a = [[randint(-5, 10) for i in range(m)] for j in range(n)]</br>
+    </br>
+    <h4>Вывод</h4>
+    </br>
+    for i in range(n):</br>
+    &emsp;for j in range(m):</br>
+    &emsp;&emsp;print(a[i][j], end=' ')</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Минимум</br>
+    </br>
+    for i in range(n):</br>
+    &emsp;for j in range(m):</br>
+    &emsp;&emsp;if a[i][j] < min:</br>
+    &emsp;&emsp;&emsp;imin = i</br>
+    &emsp;&emsp;&emsp;jmin = j </br>
+    </br>
+    <h4>Поменять местами 2 строки k1,k2</h4>
+    </br>
+    for j in range (m):</br>
+    &emsp;temp = a[k1][j]</br>
+    &emsp;a[k1][j] = a[k2][j]</br>
+    &emsp;a[k2][j] = temp</br>
+    </br>
+    <h4>Поменять местами 2 столбца k1,k2</h4>
+    </br>
+    for i in range (n):</br>
+    &emsp;temp = a[i][k1]</br>
+    &emsp;a[i][k1] = a[i][k2]</br>
+    &emsp;a[i][k2] = temp</br>
+    </br>
+    <h4>Удаление к-ой строки</h4>
+    </br>
+    for i in range (k,n-1):</br>
+    &emsp;for j in range (m):</br>
+    &emsp;&emsp;a[i][j] = a[i+1][j]</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Удаление к-ого столбца</h4>
+    </br>
+    for i in range (n):</br>
+    &emsp;for j in range (k,m-1):</br>
+    &emsp;&emsp;a[i][j] = a[i][j+1]</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Вставка строки перед к-ой строкой</h4>
+    </br>
+    for i in range (n,k-1,-1):</br>
+    &emsp;for j in range(m):</br>
+    &emsp;&emsp;a[i][j] = a[i-1][j]</br>
+    </br>
+    for j in range (m):</br>
+    &emsp;a[k-1][j] = b[j]</br>
+    </br>
+    <h4>Транспонирование – это отображение элементов относительно главной диагонали</h4>
+    </br>
+    for i in range (1,n):</br>
+    &emsp;for j in range(i):</br>
+    &emsp;&emsp;temp = a[i][j]</br>
+    &emsp;&emsp;a[i][j] = a[j][i]</br>
+    &emsp;&emsp;a[j][i] = temp</br>
+    </br>
+    </div>
+    <h2>Обходы матриц</h2>
+    <div class="chapter">
+    <img>
+    </br>
+    <h4>Обход змейкой тип 1</h4>
+    </br>
+    n = 5</br>
+    m = 5</br>
+    k = 1</br>
+    a = [[0 for i in range(n)] for i in range(n)]</br>
+    for i in range(n):</br>
+    &emsp;if i % 2 == 0:</br>
+    &emsp;&emsp;for j in range(m):</br>
+    &emsp;&emsp;&emsp;a[i][j] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    &emsp;else:</br>
+    &emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+    &emsp;&emsp;a[i][j] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    for i in range(n):</br>
+    &emsp;for j in range(n):</br>
+    &emsp;&emsp;print(a[i][j], end = ' ')</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Обход змейкой тип 2</h4>
+    </br>
+    n = 5</br>
+    m = 5</br>
+    k = 1</br>
+    a = [[0 for i in range(n)] for i in range(n)]</br>
+    for i in range(n):</br>
+    &emsp;if i % 2 != 0:</br>
+    &emsp;&emsp;for j in range(m):</br>
+    &emsp;&emsp;&emsp;a[i][j] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    &emsp;else:</br>
+    &emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+    &emsp;&emsp;a[i][j] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    for i in range(n):</br>
+    &emsp;for j in range(n):</br>
+    &emsp;&emsp;print(a[i][j], end = ' ')</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Обход змейкой тип 3</h4>
+    </br>
+    n = 5</br>
+    m = 5</br>
+    k = 1</br>
+    a = [[0 for i in range(n)] for i in range(n)]</br>
+    for i in range(n):</br>
+    &emsp;if i % 2 == 0:</br>
+    &emsp;&emsp;for j in range(m):</br>
+    &emsp;&emsp;&emsp;a[j][i] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    &emsp;else:</br>
+    &emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+    &emsp;&emsp;a[j][i] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    for i in range(n):</br>
+    &emsp;for j in range(n):</br>
+    &emsp;&emsp;print(a[i][j], end = ' ')</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Обход змейкой тип 4</h4>
+    </br>
+    n = 5</br>
+    m = 5</br>
+    k = 1</br>
+    a = [[0 for i in range(n)] for i in range(n)]</br>
+    for i in range(n):</br>
+    &emsp;if i % 2 == 0:</br>
+    &emsp;&emsp;for j in range(m):</br>
+    &emsp;&emsp;&emsp;a[j][n - i - 1] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    &emsp;else:</br>
+    &emsp;&emsp;for j in range(m - 1, -1, -1):</br>
+    &emsp;&emsp;a[j][n - i - 1] = k</br>
+    &emsp;&emsp;&emsp;k += 1</br>
+    for i in range(n):</br>
+    &emsp;for j in range(n):</br>
+    &emsp;&emsp;print(a[i][j], end = ' ')</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Обход спиралью тип 1</h4>
+    </br>
+    n = 5 #сторона квадрата</br>
+    m = 1 #начальное число</br>
+    a = [[0 for i in range(n)] for i in range(n)]</br>
+    for k in range((n + 1) // 2 + 1):</br>
+    &emsp;for j in range(k, n - k):</br>
+    &emsp;&emsp;a[k][j] = m</br>
+    &emsp;&emsp;m += 1</br>
+    &emsp;for i in range(k + 1, n - k):</br>
+    &emsp;&emsp;a[i][n - k - 1] = m</br>
+    &emsp;&emsp;m += 1</br>
+    &emsp;for j in range(n - k - 2, k - 1, -1):</br>
+    &emsp;&emsp;a[n - k - 1][j] = m</br>
+    &emsp;&emsp;m += 1</br>
+    &emsp;for i in range(n - k - 2, k, -1):</br>
+    &emsp;&emsp;a[i][k] = m</br>
+    &emsp;&emsp;m += 1</br>
+    for i in range(n):</br>
+    &emsp;for j in range(n):</br>
+    &emsp;&emsp;print(a[i][j], end = ' ')</br>
+    &emsp;print()</br>
+    </br>
+    <h4>Обход спиралью тип 2</h4>
+    </br>
+  </div>
+  </body>
 </HTML>

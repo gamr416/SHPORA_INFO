@@ -1,0 +1,21 @@
+.chapter{
+  border:
+    3px dotted black;
+    font-family: Arial;
+
+}
+
+h2 {
+  font-size: 35px;
+  color: rgb(201, 0, 201);
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(213, 0, 0);
+}
+
+h3 {
+  font-size: 25px;
+  color: rgb(0, 160, 11);
+}
