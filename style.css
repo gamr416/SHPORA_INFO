@@ -5,6 +5,12 @@
 
 }
 
+.basic_img {
+  width: 1000px;
+  height: 750px;
+  padding-bottom: 20px;
+}
+
 h2 {
   font-size: 35px;
   color: rgb(201, 0, 201);
