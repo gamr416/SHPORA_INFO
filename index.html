@@ -186,6 +186,27 @@
     </br>
     <h4>Обход спиралью тип 2</h4>
     </br>
+    n = 5</br>
+    m = 1</br>
+    A = [[0 for i in range(n)] for i in range(n)]</br>
+    for k in range(((n+1)//2)+1):</br>
+    &emsp;for j in range (n-k-1,k-1,-1):</br>
+    &emsp;&emsp;A[k][j] = m</br>
+    &emsp;&emsp;m+=1</br>
+    &emsp;for i in range (k+1,n-k):</br>
+    &emsp;&emsp;A[i][k] = m</br>
+    &emsp;&emsp;m+=1</br>
+    &emsp;m-=1</br>
+    &emsp;for j in range (k,n-k):</br>
+    &emsp;&emsp;A[n-k-1][j] = m</br>
+    &emsp;&emsp;m+=1</br>
+    &emsp;for i in range (n-k-2, k, -1):</br>
+    &emsp;&emsp;A[i][n-k-1] = m</br>
+    &emsp;&emsp;m+=1</br>
+    for i in range(n):</br>
+    &emsp;for j in range(n):</br>
+    &emsp;&emsp;print(A[i][j], end=" ")</br>
+    &emsp;print()</br>
   </div>
   </body>
 </HTML>
