@@ -430,5 +430,160 @@
   exitonclick()</br>
   </br>
   </div>
+
+  <div class="chapter">
+    from turtle import *</br>
+    def tr(x1, y1, x2, y2, x3, y3, N):</br>
+        if N > 0:</br>
+            x12 = (x1 + x2) // 2</br>
+            y12 = (y1 + y2) // 2</br>
+            x23 = (x2 + x3) // 2</br>
+            y23 = (y2 + y3) // 2</br>
+            x31 = (x1 + x3) // 2</br>
+            y31 = (y1 + y3) // 2</br>
+    
+            pu()</br>
+            goto(x31, y31)</br>
+            pd()</br>
+            goto(x12, y12)</br>
+            goto(x23, y23)</br>
+            goto(x31, y31)</br>
+    
+            tr(x1, y1, x12, y12, x31, y31, N-1)</br>
+            tr(x3, y3, x31, y31, x23, y23, N-1)</br>
+            tr(x2, y2, x12, y12, x23, y23, N-1)</br>
+    x1 = -300</br>
+    y1 = -200</br>
+    x2 = 179</br>
+    y2 = 279</br>
+    x3 = -300</br>
+    y3 = 279</br>
+    n = int(input())</br>
+    pu()</br>
+    goto(x1, y1)</br>
+    pd()</br>
+    goto(x2, y2)</br>
+    goto(x3, y3)</br>
+    goto(x1, y1)</br>
+    tr(x1, y1, x2, y2, x3, y3, n)</br>
+  </br>
+  </br>
+  tracer(0)</br>
+  def gay(n):</br>
+    if n >=1:</br>
+        for i in range(360):</br>
+            if i % 90 == 0:</br>
+                gay(n - 1)</br>
+                for j in range(360):</br>
+                    fd(n*0.5)</br>
+                    lt(1)</br>
+            fd(n)</br>
+            lt(1)</br>
+  gay(2)</br>
+</br>
+</br>
+from turtle import *</br>
+speed(0)</br>
+left(90)</br>
+def svo(n):</br>
+    if n >=1:</br>
+        forward(20*n)</br>
+        svo(n/2)</br>
+
+        forward(20*n)</br>
+        right(90)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        forward(20*n)</br>
+
+        right(90)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        forward(40*n)</br>
+        right(90)</br>
+        forward(40*n)</br>
+        right(90)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        svo(n/2)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        forward(20*n)</br>
+        right(90)</br>
+        forward(40*n)</br>
+        right(90)</br>
+
+svo(16)</br>
+
+exitonclick()</br>
+</br>
+</br>
+from turtle import *</br>
+speed(0)</br>
+
+left(180)</br>
+def svo(n):</br>
+    if n >=1:</br>
+        for y in range(6):</br>
+            for x in range(60):</br>
+                forward(0.3*n)</br>
+                right(1)</br>
+            left(90)</br>
+            penup()</br>
+            forward(10*n)</br>
+            pendown()</br>
+            for x in range(360):</br>
+                if x %60==0:</br>
+                    svo(n/3)</br>
+                forward(0.1*n)</br>
+                right(1)</br>
+            
+            penup()</br>
+            back(10*n)</br>
+            pendown()</br>
+            right(90)</br>
+svo(9)</br>
+exitonclick()</br>
+</br>
+</br>
+from turtle import *</br>
+speed(0)</br>
+tracer(0)</br>
+left(90)</br>
+begin_fill()</br>
+def svo(n):</br>
+    for x in range(4):</br>
+        if n >=1:</br>
+            fillcolor("black")</br>
+
+            back(25*n)</br>
+            left(90)</br>
+            forward(25*n)</br>
+            
+            svo(n/2)</br>
+         
+            right(90)</br>
+            
+            forward(50*n)</br>
+           
+            right(90)</br>
+            forward(50*n)</br>
+            
+            right(90)</br>
+            forward(25*n)</br>
+  
+            right(90)</br>
+
+            forward(25*n)</br>
+            right(180)</br>
+            forward(100*n)</br>
+svo(5)</br>
+end_fill()</br>
+exitonclick()</br>
+  </div>
   </body>
 </HTML>
