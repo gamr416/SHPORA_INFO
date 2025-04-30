@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon.ico">
   </head>
   <body>
-    <h1>Cайт сделан уважаемым молодым чеовеком, который не любит учиться</h1>
+    <h1>Cайт сделан уважаемым молодым чеовеком, который любит учиться</h1>
     <h3>создателя ищите по гитхабу</h3>
     <h2>Двумерные массивы</h2>
     <div class="chapter">
@@ -386,7 +386,7 @@
     &emsp;&emsp;rt(1)</br>
     &emsp;rt(180)</br>
   </div>
-  <h2>Имбуля от Гупаловой</h2>
+  <h2>Нечто</h2>
   <img src="img/imba.JPG" class="basic_img">
   <div class="chapter">
   from turtle import *</br>
@@ -434,24 +434,24 @@
   <div class="chapter">
     from turtle import *</br>
     def tr(x1, y1, x2, y2, x3, y3, N):</br>
-        if N > 0:</br>
-            x12 = (x1 + x2) // 2</br>
-            y12 = (y1 + y2) // 2</br>
-            x23 = (x2 + x3) // 2</br>
-            y23 = (y2 + y3) // 2</br>
-            x31 = (x1 + x3) // 2</br>
-            y31 = (y1 + y3) // 2</br>
+    &emsp;if N > 0:</br>
+    &emsp;&emsp;x12 = (x1 + x2) // 2</br>
+    &emsp;&emsp;y12 = (y1 + y2) // 2</br>
+    &emsp;&emsp;x23 = (x2 + x3) // 2</br>
+    &emsp;&emsp;y23 = (y2 + y3) // 2</br>
+    &emsp;&emsp;x31 = (x1 + x3) // 2</br>
+    &emsp;&emsp;y31 = (y1 + y3) // 2</br>
     
-            pu()</br>
-            goto(x31, y31)</br>
-            pd()</br>
-            goto(x12, y12)</br>
-            goto(x23, y23)</br>
-            goto(x31, y31)</br>
+    &emsp;&emsp;pu()</br>
+    &emsp;&emsp;goto(x31, y31)</br>
+    &emsp;&emsp;pd()</br>
+    &emsp;&emsp;goto(x12, y12)</br>
+    &emsp;&emsp;goto(x23, y23)</br>
+    &emsp;&emsp;goto(x31, y31)</br>
     
-            tr(x1, y1, x12, y12, x31, y31, N-1)</br>
-            tr(x3, y3, x31, y31, x23, y23, N-1)</br>
-            tr(x2, y2, x12, y12, x23, y23, N-1)</br>
+    &emsp;&emsp;tr(x1, y1, x12, y12, x31, y31, N-1)</br>
+    &emsp;&emsp;tr(x3, y3, x31, y31, x23, y23, N-1)</br>
+    &emsp;&emsp;tr(x2, y2, x12, y12, x23, y23, N-1)</br>
     x1 = -300</br>
     y1 = -200</br>
     x2 = 179</br>
@@ -469,55 +469,55 @@
   </br>
   </br>
   tracer(0)</br>
-  def gay(n):</br>
-    if n >=1:</br>
-        for i in range(360):</br>
-            if i % 90 == 0:</br>
-                gay(n - 1)</br>
-                for j in range(360):</br>
-                    fd(n*0.5)</br>
-                    lt(1)</br>
-            fd(n)</br>
-            lt(1)</br>
-  gay(2)</br>
+  def figure(n):</br>
+  &emsp;if n >=1:</br>
+  &emsp;&emsp;for i in range(360):</br>
+  &emsp;&emsp;&emsp;if i % 90 == 0:</br>
+  &emsp;&emsp;&emsp;&emsp;figure(n - 1)</br>
+  &emsp;&emsp;&emsp;&emsp;for j in range(360):</br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;fd(n*0.5)</br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;lt(1)</br>
+  &emsp;&emsp;&emsp;fd(n)</br>
+  &emsp;&emsp;&emsp;lt(1)</br>
+  figure(2)</br>
 </br>
 </br>
 from turtle import *</br>
 speed(0)</br>
 left(90)</br>
-def svo(n):</br>
-    if n >=1:</br>
-        forward(20*n)</br>
-        svo(n/2)</br>
+def figure(n):</br>
+&emsp;if n >=1:</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;figure(n/2)</br>
 
-        forward(20*n)</br>
-        right(90)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        forward(20*n)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
 
-        right(90)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        forward(40*n)</br>
-        right(90)</br>
-        forward(40*n)</br>
-        right(90)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        svo(n/2)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        forward(20*n)</br>
-        right(90)</br>
-        forward(40*n)</br>
-        right(90)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(40*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(40*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;figure(n/2)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(20*n)</br>
+&emsp;&emsp;right(90)</br>
+&emsp;&emsp;forward(40*n)</br>
+&emsp;&emsp;right(90)</br>
 
-svo(16)</br>
+figure(16)</br>
 
 exitonclick()</br>
 </br>
@@ -526,27 +526,27 @@ from turtle import *</br>
 speed(0)</br>
 
 left(180)</br>
-def svo(n):</br>
-    if n >=1:</br>
-        for y in range(6):</br>
-            for x in range(60):</br>
-                forward(0.3*n)</br>
-                right(1)</br>
-            left(90)</br>
-            penup()</br>
-            forward(10*n)</br>
-            pendown()</br>
-            for x in range(360):</br>
-                if x %60==0:</br>
-                    svo(n/3)</br>
-                forward(0.1*n)</br>
-                right(1)</br>
+def figure(n):</br>
+&emsp;if n >=1:</br>
+&emsp;&emsp;for y in range(6):</br>
+&emsp;&emsp;&emsp;for x in range(60):</br>
+&emsp;&emsp;&emsp;&emsp;forward(0.3*n)</br>
+&emsp;&emsp;&emsp;&emsp;right(1)</br>
+&emsp;&emsp;&emsp;left(90)</br>
+&emsp;&emsp;&emsp;penup()</br>
+&emsp;&emsp;&emsp;forward(10*n)</br>
+&emsp;&emsp;&emsp;pendown()</br>
+&emsp;&emsp;&emsp;for x in range(360):</br>
+&emsp;&emsp;&emsp;&emsp;if x %60==0:</br>
+&emsp;&emsp;&emsp;&emsp;&emsp;figure(n/3)</br>
+&emsp;&emsp;&emsp;&emsp;forward(0.1*n)</br>
+&emsp;&emsp;&emsp;&emsp;right(1)</br>
             
-            penup()</br>
-            back(10*n)</br>
-            pendown()</br>
-            right(90)</br>
-svo(9)</br>
+&emsp;&emsp;&emsp;penup()</br>
+&emsp;&emsp;&emsp;back(10*n)</br>
+&emsp;&emsp;&emsp;pendown()</br>
+&emsp;&emsp;&emsp;right(90)</br>
+figure(9)</br>
 exitonclick()</br>
 </br>
 </br>
@@ -555,33 +555,28 @@ speed(0)</br>
 tracer(0)</br>
 left(90)</br>
 begin_fill()</br>
-def svo(n):</br>
-    for x in range(4):</br>
-        if n >=1:</br>
-            fillcolor("black")</br>
+def figure(n):</br>
+&emsp;for x in range(4):</br>
+&emsp;&emsp;if n >=1:</br>
+&emsp;&emsp;&emsp;fillcolor("black")</br>
 
-            back(25*n)</br>
-            left(90)</br>
-            forward(25*n)</br>
+&emsp;&emsp;&emsp;back(25*n)</br>
+&emsp;&emsp;&emsp;left(90)</br>
+&emsp;&emsp;&emsp;forward(25*n)</br>
             
-            svo(n/2)</br>
+&emsp;&emsp;&emsp;figure(n/2)</br>
          
-            right(90)</br>
-            
-            forward(50*n)</br>
-           
-            right(90)</br>
-            forward(50*n)</br>
-            
-            right(90)</br>
-            forward(25*n)</br>
-  
-            right(90)</br>
-
-            forward(25*n)</br>
-            right(180)</br>
-            forward(100*n)</br>
-svo(5)</br>
+&emsp;&emsp;&emsp;right(90)</br>
+&emsp;&emsp;&emsp;forward(50*n)</br>
+&emsp;&emsp;&emsp;right(90)</br>
+&emsp;&emsp;&emsp;forward(50*n)</br>
+&emsp;&emsp;&emsp;right(90)</br>
+&emsp;&emsp;&emsp;forward(25*n)</br>
+&emsp;&emsp;&emsp;right(90)</br>
+&emsp;&emsp;&emsp;forward(25*n)</br>
+&emsp;&emsp;&emsp;right(180)</br>
+&emsp;&emsp;&emsp;forward(100*n)</br>
+figure(5)</br>
 end_fill()</br>
 exitonclick()</br>
   </div>
